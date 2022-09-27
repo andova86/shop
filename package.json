@@ -16,9 +16,13 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
+    "@mui/x-data-grid": "^5.17.4",
+    "@reduxjs/toolkit": "^1.8.5",
+    "axios": "^0.27.2",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-redux": "^8.0.4",
     "react-slideshow-image": "^4.0.5"
   },
   "devDependencies": {

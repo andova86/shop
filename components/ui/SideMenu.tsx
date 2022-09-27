@@ -1,13 +1,21 @@
 import { Box, Divider, Drawer, IconButton, Input, InputAdornment, List, ListItem, ListItemIcon, ListItemText, ListSubheader } from "@mui/material"
 import { AccountCircleOutlined, AdminPanelSettings, CategoryOutlined, ConfirmationNumberOutlined, EscalatorWarningOutlined, FemaleOutlined, LoginOutlined, MaleOutlined, SearchOutlined, VpnKeyOutlined } from "@mui/icons-material"
-
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from "../../redux/store"
+import { isOpenMenuSet } from "../../redux/slices"
 
 export const SideMenu = () => {
+
+    const state = useSelector((state:RootState) => state.theme)
+    const dispatch = useDispatch()
+
+
     return (
         <Drawer
-            open={false}
+            open={state.isOpenMenu}
             anchor='right'
             sx={{ backdropFilter: 'blur(4px)', transition: 'all 0.5s ease-out' }}
+            onClose={() => {dispatch(isOpenMenuSet(!state.isOpenMenu))}}
         >
             <Box sx={{ width: 250, paddingTop: 5 }}>
 

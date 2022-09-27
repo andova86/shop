@@ -13,7 +13,8 @@ export const ProductSlideShow: FC<Props> = ({ images }) => {
         <Slide>
             {images.map((slideImage, index) => {
 
-                const url = `/products/${slideImage}`;
+               // const url = `/products/${slideImage}`;
+               const url = `${slideImage}`;
                 console.log(url);
 
 
